@@ -1,12 +1,9 @@
 #include "main.h"
-
 /**
- * print_rev - prints the
- * string in revrse
+ * print_rev - prints the string in revrse
  * @s: holds the character string
  * Return: 0
  */
-
 void print_rev(char *s)
 {
 	int i;
