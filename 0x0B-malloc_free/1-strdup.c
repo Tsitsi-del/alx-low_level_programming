@@ -3,9 +3,10 @@
 #include <stdlib.h>
 
 /**
- * _strdup - function that return a pointer to a duplicated string
+ * _strdup- function that return a pointer to a duplicated string
  * @str: string of characters
- * Retrun: pointer to the duplicated string, NULL
+ * Description: function return pointer to duplicated string
+ * Return: 0
  */
 
 char *_strdup(char *str)
