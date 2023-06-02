@@ -7,7 +7,7 @@
  * add_node - add a new node at the beginning of lis
  * @head: pointer to the list_t
  * @str: string to add in node
- * return: address of new string, or NULL if fails
+ * Return: address of new string, or NULL if fails
  */
 list_t *add_node(list_t **head, const char *str)
 {
