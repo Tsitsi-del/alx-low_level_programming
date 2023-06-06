@@ -7,7 +7,7 @@
  * @idx: index where new node will be inserted
  * @n: value of the new node
  * Return: NULL - if function fails
- * 	Otherwise - pointer of new node
+ *	Otherwise - pointer of new node
  */
 
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
@@ -25,7 +25,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 
 	if (idx == 0)
 	{
-		new ->next = curr;
+		new->next = curr;
 		*head = new;
 		return (new);
 	}
