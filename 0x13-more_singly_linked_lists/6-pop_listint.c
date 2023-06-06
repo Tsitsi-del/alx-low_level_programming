@@ -2,9 +2,9 @@
 
 /**
  * pop_listint - deletes head node of the list
- * @head - a pointer to the address of the head node
+ * @head: a pointer to the address of the head node
  * Return: 0, if list is empty.
- * 	Otherwise - head note data
+ *	Otherwise - head note data
  */
 
 int pop_listint(listint_t **head)
@@ -20,7 +20,7 @@ int pop_listint(listint_t **head)
 	val = (*head)->n;
 	*head = (*head)->next;
 
-	free (tm);
+	free(tm);
 
 	return (val);
 }
