@@ -13,7 +13,7 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 	unsigned long int exclu = n ^ m;
 	unsigned long int position;
 
-	for (index = 63; index >= 0; index++)
+	for (index = 63; index >= 0; index--)
 	{
 		position = exclu >> index;
 		if (position & 1)
