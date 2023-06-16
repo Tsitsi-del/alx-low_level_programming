@@ -66,8 +66,7 @@ int main(int argc, char *argv[])
 	rd = read(buf_from, buf, 1024);
 	buf_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 
-	do
-	{
+	do {
 		if (buf_from == -1 || rd == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can not read from file %s\n", argv[1]);
