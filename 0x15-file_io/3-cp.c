@@ -34,7 +34,7 @@ void file_close(int file_d)
 {
 	int cl;
 
-	cl = close;
+	cl = close(file_d);
 
 	if (cl == -1)
 	{
@@ -62,7 +62,7 @@ int main(int argc, char *argv[])
 		exit(97);
 	}
 	buf = buf_create(argv[2]);
-	buf_from = open(argv[1], O_RONLY);
+	buf_from = open(argv[1], O_RDONLY);
 	rd = read(buf_from, buf, 1024);
 	buf_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 
