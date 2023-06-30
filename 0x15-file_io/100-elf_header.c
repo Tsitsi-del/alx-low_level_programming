@@ -29,10 +29,10 @@ void check_elf(unsigned char *e_ident)
 
 	for (i = 0; i < 4; i++)
 	{
-		if (e_indent[i] != 127 &&
-				e_indent[i] != 'E' &&
-				e_indent[i] != 'L' &&
-				e_indent[i] != 'F')
+		if (e_ident[i] != 127 &&
+				e_ident[i] != 'E' &&
+				e_ident[i] != 'L' &&
+				e_ident[i] != 'F')
 		{
 			dprintf(STDERR_FILENO, "Error: Not an ELF file\n");
 			exit(98); }}
@@ -156,6 +156,7 @@ void print_osabi(unsigned char *e_ident)
 			break;
 		case ELFOSABI_IRIX:
 			printf("UNIX - IRIX\n");
+			break;
 		case ELFOSABI_FREEBSD:
 			printf("UNIX - FreeBSD\n");
 			break;
@@ -181,8 +182,6 @@ void print_abi(unsigned char *e_ident)
 {
 	printf("  ABI Version:                       %d\n",
 			e_ident[EI_ABIVERSION]);
-}
-
 }
 
 /**
@@ -236,7 +235,7 @@ void print_entry(unsigned long int e_entry, unsigned char *e_ident)
 		e_entry = (e_entry << 16) | (e_entry >> 16);
 	}
 	if (e_ident[EI_CLASS] == ELFCLASS32)
-		printf("&#\n", (unsigned int)e_entry);
+		printf("%#x\n", (unsigned int)e_entry);
 	else
 		printf("%#lx\n", e_entry);
 }
