@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * print_distint - Function to print doubly linked list
+ * print_dlistint - Function to print doubly linked list
  * @h: pointer to the list
  * Return: size or number of nodes in a list
  */
