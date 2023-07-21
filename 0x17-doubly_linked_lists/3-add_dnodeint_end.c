@@ -9,13 +9,13 @@
 
 dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 {
-	distint_t *new;
-	distint_t *tem = *head;
+	dlistint_t *new;
+	dlistint_t *tem = *head;
 
 	if (head == NULL)
 		return (NULL);
 
-	new = malloc(sizeof(distint_t));
+	new = malloc(sizeof(dlistint_t));
 	if (new == NULL)
 		return (NULL);
 
