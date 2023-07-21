@@ -1,13 +1,13 @@
 #include "lists.h"
 
 /**
- * free_distint - Function that frees a double linked list
+ * free_dlistint - Function that frees a double linked list
  * @head: pointer to list that needs to be freed
  */
 
 void free_dlistint(dlistint_t *head)
 {
-	distint_t *tem;
+	dlistint_t *tem;
 
 	while (head != NULL)
 	{
