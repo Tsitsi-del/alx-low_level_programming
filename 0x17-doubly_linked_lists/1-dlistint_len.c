@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * distint_len - Function returns number of nodes in a list
+ * dlistint_len - Function returns number of nodes in a list
  * @h: pointer to list
  * Return: number of nodes
  */
@@ -16,7 +16,7 @@ size_t dlistint_len(const dlistint_t *h)
 	while (h != NULL)
 	{
 		num_nodes++;
-		h= h->next;
+		h = h->next;
 	}
 	return (num_nodes);
 }
