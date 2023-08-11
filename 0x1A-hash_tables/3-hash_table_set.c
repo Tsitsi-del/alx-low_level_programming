@@ -62,14 +62,14 @@ hash_node_t *_node_(const char *key, const char *value)
 
 	node_new->key = strdup(key);
 
-	if (!node_new->key)
+	if (node_new->key == NULL)
 	{
 		free(node_new);
 		return (NULL);
 	}
 	node_new->value = strdup(value);
 
-	if (!node_new->value)
+	if (node_new->value == NULL)
 	{
 		free(node_new->key);
 		free(node_new);
