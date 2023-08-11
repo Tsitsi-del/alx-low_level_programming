@@ -4,7 +4,7 @@
  * hash_table_get - function that gets value of key
  * @ht: pointer to hash aaray
  * @key: pointer to key to look for
- * Retrun: value or NULL
+ * Return: value or NULL
  */
 
 char *hash_table_get(const hash_table_t *ht, const char *key)
