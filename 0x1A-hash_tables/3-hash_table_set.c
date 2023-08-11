@@ -52,7 +52,7 @@ hash_node_t *_node_(const char *key, const char *value)
 {
 	hash_node_t *node_new;
 
-	if (!key || strcmp(key, "") == 0 || !value)
+	if (key == NULL || strcmp(key, "") == 0 || value == NULL)
 	{
 		return (NULL); }
 	node_new = malloc(sizeof(hash_node_t));
